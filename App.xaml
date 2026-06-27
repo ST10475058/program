@@ -1,0 +1,10 @@
+﻿<Application x:Class="CybersecurityChatbotPOE.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="SuccessColor" Color="#2ECC71"/>
+        <SolidColorBrush x:Key="WarningColor" Color="#E74C3C"/>
+        <SolidColorBrush x:Key="InfoColor" Color="#3498DB"/>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,52 @@
+﻿<Window x:Class="CybersecurityChatbotPOE.Views.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="🎮 Cybersecurity Quiz" Height="550" Width="700"
+        WindowStartupLocation="CenterOwner"
+        Background="#0D1B2A">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0" Text="🎮 CYBERSECURITY QUIZ" FontSize="24" FontWeight="Bold" 
+                   Foreground="#2ECC71" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        <!-- Score and Progress -->
+        <Grid Grid.Row="1" Margin="0,0,0,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="ScoreText" Text="Score: 0" Foreground="#F39C12" FontWeight="Bold" FontSize="14"/>
+            <TextBlock x:Name="ProgressText" Grid.Column="1" Text="Question 1 / 12" Foreground="#778DA9" FontSize="14"/>
+        </Grid>
+
+        <!-- Progress Bar -->
+        <ProgressBar x:Name="ProgressBar" Grid.Row="2" Height="8" Foreground="#2ECC71" 
+                     Background="#1B263B" Minimum="0" Maximum="100" Value="0" Margin="0,0,0,20"/>
+
+        <!-- Question Box -->
+        <Border Grid.Row="3" Background="#1B263B" CornerRadius="12" 
+                BorderBrush="#415A77" BorderThickness="1" Padding="20" Margin="0,0,0,20">
+            <TextBlock x:Name="QuestionText" Text="" Foreground="White" 
+                       FontSize="16" TextWrapping="Wrap"/>
+        </Border>
+
+        <!-- Options Panel -->
+        <StackPanel x:Name="OptionsPanel" Grid.Row="4" Margin="0,0,0,20"/>
+
+        <!-- Next Button -->
+        <Button x:Name="NextButton" Grid.Row="5" Content="Next Question →" 
+                Width="150" Height="45" HorizontalAlignment="Right"
+                Background="#2ECC71" Foreground="White" FontWeight="Bold"
+                FontSize="14" Cursor="Hand" Click="NextButton_Click" IsEnabled="False"/>
+    </Grid>
+</Window>
